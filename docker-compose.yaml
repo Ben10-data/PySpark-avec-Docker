@@ -15,6 +15,7 @@ services:
       - "7077:7077"
     volumes:
       - ./app:/opt/spark/app
+      - ./app/data:/data
     networks:
       - spark-network
 
@@ -33,6 +34,7 @@ services:
       - "8081:8081"
     volumes:
       - ./app:/opt/spark/app
+      - ./app/data:/data
     networks:
       - spark-network
 
@@ -47,6 +49,7 @@ services:
       - spark-master
     volumes:
       - ./app:/opt/spark/app
+      - ./app/data:/data
     networks:
       - spark-network
 
@@ -60,13 +63,12 @@ services:
       - PYSPARK_PYTHON=python3
       - JUPYTER_TOKEN=benomar10
     volumes:
-      - ./notebooks:/home/spark/notebooks
-      - ./app/data:/home/spark/notebooks/data
+        - ./notebooks:/home/spark/notebooks
+        - ./app/data:/data
     networks:
       - spark-network
     depends_on:
       - spark-master
-
 
 networks:
   spark-network:

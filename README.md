@@ -91,7 +91,7 @@ docker-compose up -d
 
 ---
 
-### ⚡ Exécuter un script `.py` présent dans `app/`
+### ⚡ Exécuter un script `.py` présent dans `app/` 
 
 #### Donner les permissions d’exécution au script :
 
@@ -104,6 +104,7 @@ chmod +x execution_hote.sh
 ```bash
 ./execution_hote.sh mon_script.py
 ```
+Mais si t'as d'autres script dans ton dossier app/, il faut juste changer mon_script.py par le nom du script.
 
 ---
 

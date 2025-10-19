@@ -5,7 +5,6 @@
 Ce projet a pour objectif de **déployer un environnement Apache Spark** à l’aide de **Docker** et **Docker Compose**, afin de faciliter le développement, l’exécution et l’analyse de traitements distribués en **PySpark**.
 Il contient des scripts Python, des notebooks d’analyse et des fichiers de configuration pour automatiser le déploiement et l’exécution d’un cluster Spark localement.
 
----
 
 ## 🧩 Structure du projet
 
@@ -91,7 +90,7 @@ docker-compose up -d
 
 ---
 
-### ⚡ Exécuter un script `.py` présent dans `app/` 
+### ⚡ Exécuter un script `.py` présent dans `app/`
 
 #### Donner les permissions d’exécution au script :
 
@@ -104,7 +103,6 @@ chmod +x execution_hote.sh
 ```bash
 ./execution_hote.sh mon_script.py
 ```
-Mais si t'as d'autres script dans ton dossier app/, il faut juste changer mon_script.py par le nom du script.
 
 ---
 
@@ -124,7 +122,6 @@ Pour explorer les données :
 2. Lance le serveur Jupyter à l’intérieur du conteneur (si configuré)
 3. Accède à l’interface via ton navigateur
 
----
 
 ## 🧰 Personnalisation
 

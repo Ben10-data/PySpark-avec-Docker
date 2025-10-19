@@ -61,6 +61,7 @@ services:
       - JUPYTER_TOKEN=benomar10
     volumes:
       - ./notebooks:/home/spark/notebooks
+      - ./app/data:/home/spark/notebooks/data
     networks:
       - spark-network
     depends_on:

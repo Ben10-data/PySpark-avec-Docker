@@ -103,7 +103,8 @@ chmod +x execution_hote.sh
 ```bash
 ./execution_hote.sh mon_script.py
 ```
-
+Il est à noter que le fichier .py doit exister dans le dossier /app 
+apres un `docker compose up -d`, on peut donner les droits d'execution le `chmod` et executer le fichier `./execution_hote.sh mon_du_fichier.py`.
 ---
 
 Le cluster démarre avec :

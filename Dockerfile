@@ -14,6 +14,11 @@ RUN set -ex; \
 
 
 RUN pip install --no-cache-dir numpy==1.26.4 pandas==2.1.1
+
+# on veut utiliser postgres, il nous ajouter son jar pour pertmettre la compilation 
+RUN wget https://jdbc.postgresql.org/download/postgresql-42.7.3.jar -P /opt/spark/jars/
+
+
 # Variables d'environnement, ici c'est l'endroit dans le container ou est stocker nos fichiers .ipynb 
 # t'as capté 
 ENV HOME=/home/spark

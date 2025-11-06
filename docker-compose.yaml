@@ -70,6 +70,21 @@ services:
     depends_on:
       - spark-master
 
+  postgres_spark:
+    image: postgres:16
+    container_name: postgres
+    ports:
+      - "5450:5432"
+    environment:
+          POSTGRES_USER: ben
+          POSTGRES_PASSWORD: admin_pwd
+          POSTGRES_DB: dataDB
+    volumes:
+      - ./Base_de_donnees/Postgres:/var/lib/postgresql/data # nous allons persister nos données ici 
+    networks:
+      - spark-network
+
+
 networks:
   spark-network:
     driver: bridge

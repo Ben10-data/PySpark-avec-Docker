@@ -13,6 +13,7 @@ RUN set -ex; \
     rm -rf /var/lib/apt/lists/*
 
 
+RUN pip install --no-cache-dir numpy==1.26.4 pandas==2.1.1
 # Variables d'environnement, ici c'est l'endroit dans le container ou est stocker nos fichiers .ipynb 
 # t'as capté 
 ENV HOME=/home/spark
